@@ -32,8 +32,9 @@ const HomePage = () => {
       <main>
         <h1>Pokémon</h1>
         <div>
-          <label style={{ display: "block" }}>Select a Pokémon</label>
+          <label htmlFor="pokemon-select">Select a Pokémon</label>{" "}
           <select
+            id="pokemon-select"
             value={selectedPokemon ?? ""}
             onChange={(event) =>
               router.push(`/?pokemon=${event.target.value}`, undefined, {
